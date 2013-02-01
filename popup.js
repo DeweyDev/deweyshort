@@ -20,7 +20,7 @@ $("#kinch").change(function () {
 //Set up code for url expanding
 
 $("#button").click(function () {
-    $("#content").text("");
+    $("#ajaxfiller").text("");
     //Get URL entered
     var urlgiven = $("#input").val();
     var jsonurl = "https://www.googleapis.com/urlshortener/v1/url?shortUrl=" + urlgiven;
@@ -37,7 +37,7 @@ $("#button").click(function () {
 //Set up code for url despanding
 
 $("#button2").click(function () {
-    $("#content").text("");
+    $("#ajaxfiller").text("");
     //Get URL entered
     var urlgiven = $("#input2").val();
     $.getJSON("http://v.gd/create.php?format=json&url="+urlgiven +"&callback=?",function(data){
