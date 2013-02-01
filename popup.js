@@ -42,7 +42,7 @@ $("#button2").click(function () {
     var urlgiven = $("#input2").val();
     $.getJSON("http://v.gd/create.php?format=json&url="+urlgiven +"&callback=?",function(data){
      var shorty = JSON.stringify(data.shorturl);
-     $("#content").append(shorty);
+     $("#ajaxfiller").append(shorty);
     });
    
     
