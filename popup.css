@@ -37,3 +37,12 @@ p:first-child {
     font-size: 20px;
     padding-bottom: 10px;
 }
+
+* {
+    background-color: #F2F2F2;
+}
+
+.input_class {
+    background-color: white;
+    width: 270px;
+}
