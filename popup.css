@@ -1,0 +1,39 @@
+#button {
+    border-radius: .01px;
+    background-color: #CCFFFF;
+    font-family: Calibri;
+    height: 35px;
+    width: 75px;
+    border: .0001px solid #CCFFFF;
+}
+
+body {
+    font-family: Calibri;
+}
+
+*{
+    margin: 0 auto;
+}
+
+#button2 {
+    border-radius: .01px;
+    background-color: #CCFFFF;
+    font-family: Calibri;
+    height: 35px;
+    width: 75px;
+    border: .0001px solid #CCFFFF;
+}
+
+#button:hover {
+    background-color: #B8E6E6;
+}
+
+#button2:hover {
+    background-color: #B8E6E6;
+}
+
+p:first-child {
+    font-family: Calibri;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
