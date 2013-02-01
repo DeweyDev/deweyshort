@@ -29,7 +29,7 @@ $("#button").click(function () {
         console.log(data.longUrl);
 
         var finish = JSON.stringify(data.longUrl);
-        $("#content").append(finish);
+        $("#ajaxfiller").append(finish);
 
     });
 });
