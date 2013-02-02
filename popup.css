@@ -46,3 +46,17 @@ p:first-child {
     background-color: white;
     width: 270px;
 }
+
+.bootypipe {
+    border-radius: .01px;
+    background-color: #D8D8D8;
+    font-family: Calibri;
+    font-size: 18px;
+    height: 35px;
+    width: 100px;
+    border: .00001px solid #D8D8D8;
+}
+
+.bootypipe:hover {
+    background-color: #A4A4A4;
+}
