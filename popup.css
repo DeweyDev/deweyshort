@@ -26,10 +26,12 @@ body {
 
 #button:hover {
     background-color: #B8E6E6;
+    cursor: pointer;
 }
 
 #button2:hover {
     background-color: #B8E6E6;
+    cursor: pointer;
 }
 
 p:first-child {
@@ -59,4 +61,5 @@ p:first-child {
 
 .bootypipe:hover {
     background-color: #A4A4A4;
+    cursor: pointer;
 }
