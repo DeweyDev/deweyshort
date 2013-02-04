@@ -1,3 +1,7 @@
+html {
+    height: 225px;
+    width: 400px;
+}
 #button {
     border-radius: .01px;
     background-color: #CCFFFF;
@@ -34,10 +38,16 @@ body {
     cursor: pointer;
 }
 
-p:first-child {
+#paragraph-1 {
     font-family: Calibri;
     font-size: 20px;
     padding-bottom: 10px;
+    color: white;
+    background-color: #3C3C41;
+    padding-top: 0px;
+    position: absolute;
+    top:0px;
+    width: 275px;
 }
 
 * {
@@ -63,3 +73,4 @@ p:first-child {
     background-color: #A4A4A4;
     cursor: pointer;
 }
+
