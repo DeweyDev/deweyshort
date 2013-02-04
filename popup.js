@@ -1,3 +1,10 @@
+//Don't touch this
+
+ String.prototype.replaceAt = function(index, character) {
+      return this.substr(0, index) + character + this.substr(index+character.length);
+   }
+
+
 //Set up window
 $("#shorten").hide();
 
@@ -29,6 +36,7 @@ $("#button").click(function () {
         console.log(data.longUrl);
 
         var finish = JSON.stringify(data.longUrl);
+        
         $("#ajaxfiller").append(finish);
 
     });
