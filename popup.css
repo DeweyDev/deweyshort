@@ -9,6 +9,7 @@ html {
     height: 35px;
     width: 75px;
     border: .0001px solid #CCFFFF;
+    margin-top: 10px;
 }
 
 body {
@@ -19,6 +20,19 @@ body {
     margin: 0 auto;
 }
 
+#kinch {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    font-size: 14px;
+    padding-left: 20px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    margin-left: -50px;
+}
+
 #button2 {
     border-radius: .01px;
     background-color: #CCFFFF;
@@ -26,6 +40,7 @@ body {
     height: 35px;
     width: 75px;
     border: .0001px solid #CCFFFF;
+    margin-top: 10px;
 }
 
 #button:hover {
@@ -41,7 +56,6 @@ body {
 #paragraph-1 {
     font-family: Calibri;
     font-size: 40px;
-    /*padding-bottom: 10px;*/
     color: white;
     background-color: #3C3C41;
     padding-top: 0px;
@@ -50,11 +64,19 @@ body {
     width: 275px;
 }
 
+#paragraph-2 {
+    font-family: Calibri;
+    font-size: 16px;
+    position: absolute;
+    top: 77px;
+}
+
 * {
     background-color: #F2F2F2;
 }
 
 .input_class {
+    margin-top: 100px;
     background-color: white;
     width: 270px;
 }
