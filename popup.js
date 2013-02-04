@@ -36,7 +36,9 @@ $("#button").click(function () {
         console.log(data.longUrl);
 
         var finish = JSON.stringify(data.longUrl);
-        
+        finish = finish.replace( /"/, '' );
+        var lengy = finish.length;
+        finish = finish.replaceAt((lengy-1)," ");
         $("#ajaxfiller").append(finish);
 
     });
@@ -50,6 +52,9 @@ $("#button2").click(function () {
     var urlgiven = $("#input2").val();
     $.getJSON("http://v.gd/create.php?format=json&url="+urlgiven /* +"&callback=?"*/,function(data){
      var shorty = JSON.stringify(data.shorturl);
+     shorty = shorty.replace( /"/, '' );
+     var lengy = shorty.length;
+    shorty = shorty.replaceAt((lengy-1)," ");
      $("#ajaxfiller").append(shorty);
     });
    
