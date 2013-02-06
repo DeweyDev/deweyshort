@@ -6,6 +6,7 @@
 
 
 //Set up window
+
 $("#shorten").hide();
 $("#kinchyj").hide();
 
@@ -64,10 +65,79 @@ $("#button2").click(function () {
     
 });
 
-//Set up code for clicking teh copy button
+//Set up code for clicking the copy button
 
 $('#copybutton').click(function(){
 
     $("#ajaxfiller").select();
     document.execCommand('copy');
+});
+
+//Set up code for changing the modes
+
+$('#googl').click(function(){
+    
+    $("#googl").addClass("active");
+    $("#bitly").removeClass("active");
+    $("#vco").removeClass("active");
+    $("#tinyurl").removeClass("active");
+    $("#supr").removeClass("active");
+    $("#owly").removeClass("active");
+});
+
+$('#bitly').click(function(){
+
+    $("#googl").removeClass("active");
+    $("#bitly").addClass("active");
+    $("#vco").removeClass("active");
+    $("#tinyurl").removeClass("active");
+    $("#supr").removeClass("active");
+    $("#owly").removeClass("active");
+    
+});
+
+$('#vco').click(function(){
+
+    $("#googl").removeClass("active");
+    $("#bitly").removeClass("active");
+    $("#vco").addClass("active");
+    $("#tinyurl").removeClass("active");
+    $("#supr").removeClass("active");
+    $("#owly").removeClass("active");
+    
+});
+
+$('#tinyurl').click(function(){
+
+    $("#googl").removeClass("active");
+    $("#bitly").removeClass("active");
+    $("#vco").removeClass("active");
+    $("#tinyurl").addClass("active");
+    $("#supr").removeClass("active");
+    $("#owly").removeClass("active");
+
+    
+});
+
+$('#supr').click(function(){
+
+    $("#googl").removeClass("active");
+    $("#bitly").removeClass("active");
+    $("#vco").removeClass("active");
+    $("#tinyurl").removeClass("active");
+    $("#supr").addClass("active");
+    $("#owly").removeClass("active");
+    
+});
+
+$('#owly').click(function(){
+
+    $("#googl").removeClass("active");
+    $("#bitly").removeClass("active");
+    $("#vco").removeClass("active");
+    $("#tinyurl").removeClass("active");
+    $("#supr").removeClass("active");
+    $("#owly").addClass("active");
+
+    
 });
