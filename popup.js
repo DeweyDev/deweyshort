@@ -8,6 +8,7 @@
 //Set up window
 $("#shorten").hide();
 $("#kinchyj").hide();
+
 //Set up code for switching views
 
 $("#kinch").change(function () {
@@ -39,9 +40,9 @@ $("#button").click(function () {
         finish = finish.replace( /"/, '' );
         var lengy = finish.length;
         finish = finish.replaceAt((lengy-1)," ");
-        $("#ajaxfiller").val(finish);
         $("#kinchyj").show();
-
+        $("#ajaxfiller").val(finish);
+        
     });
 });
 
@@ -56,9 +57,17 @@ $("#button2").click(function () {
      shorty = shorty.replace( /"/, '' );
      var lengy = shorty.length;
     shorty = shorty.replaceAt((lengy-1)," ");
-     $("#ajaxfiller").val(shorty);
      $("#kinchyj").show();
+     $("#ajaxfiller").val(shorty);
     });
    
     
+});
+
+//Set up code for clicking teh copy button
+
+$('#copybutton').click(function(){
+
+    $("#ajaxfiller").select();
+    document.execCommand('copy');
 });
