@@ -1,4 +1,4 @@
-webdevelopment
+Dewey Short
 ==============
 
-quirky stuff
+A Chrome URL shortening extension
