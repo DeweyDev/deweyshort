@@ -78,14 +78,24 @@ $("#button2").click(function () {
         $("#ajaxfiller").text("");
         //Get URL entered
         var urlgiven = $("#input2").val();
-        $.post("https://www.googleapis.com/urlshortener/v1/url",{"longUrl": urlgiven},function(data){
-            var shorty = JSON.stringify(data.id);
+        var givetogoogle = '"' + urlgiven +'"';
+        $.ajax({
+            type: 'POST',
+            contentType: "application/json",
+            context : document.body,
+            url: "https://www.googleapis.com/urlshortener/v1/url?key={AIzaSyBGK6rxkRf20_L8yPjk3Oe-6qHLn530vYE}",
+            data: { longUrl: "http://www.google.com/"},
+            success: bunz(data),
+            dataType: "jsonp"
+        });
+           /* alert(data);
+            var shorty = JSON.stringify(data);
             shorty = shorty.replace( /"/, '' );
             var lengy = shorty.length;
             shorty = shorty.replaceAt((lengy-1)," ");
             $("#kinchyj").show();
-            $("#ajaxfiller").val(shorty);
-        });
+            $("#ajaxfiller").val(shorty); */
+
 
     }
 
