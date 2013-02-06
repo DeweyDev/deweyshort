@@ -29,40 +29,66 @@ $("#kinch").change(function () {
 //Set up code for url expanding
 
 $("#button").click(function () {
-    $("#ajaxfiller").text("");
-    //Get URL entered
-    var urlgiven = $("#input").val();
-    var jsonurl = "https://www.googleapis.com/urlshortener/v1/url?shortUrl=" + urlgiven;
-    $.getJSON(jsonurl, function (data) {
-        //Log the data recieved
-        console.log(data.longUrl);
+    
+    if ($('#googl').hasClass('active')) {
+        //do something
+        $("#ajaxfiller").text("");
+        //Get URL entered
+        var urlgiven = $("#input").val();
+        var jsonurl = "https://www.googleapis.com/urlshortener/v1/url?shortUrl=" + urlgiven;
+        $.getJSON(jsonurl, function (data) {
+            //Log the data recieved
+            console.log(data.longUrl);
 
-        var finish = JSON.stringify(data.longUrl);
-        finish = finish.replace( /"/, '' );
-        var lengy = finish.length;
-        finish = finish.replaceAt((lengy-1)," ");
-        $("#kinchyj").show();
-        $("#ajaxfiller").val(finish);
+            var finish = JSON.stringify(data.longUrl);
+            finish = finish.replace( /"/, '' );
+            var lengy = finish.length;
+            finish = finish.replaceAt((lengy-1)," ");
+            $("#kinchyj").show();
+         $("#ajaxfiller").val(finish);
         
-    });
+        });
+    }
+
 });
 
 //Set up code for url despanding
 
 $("#button2").click(function () {
-    $("#ajaxfiller").text("");
-    //Get URL entered
-    var urlgiven = $("#input2").val();
-    $.getJSON("http://v.gd/create.php?format=json&url="+urlgiven /* +"&callback=?"*/,function(data){
-     var shorty = JSON.stringify(data.shorturl);
-     shorty = shorty.replace( /"/, '' );
-     var lengy = shorty.length;
-    shorty = shorty.replaceAt((lengy-1)," ");
-     $("#kinchyj").show();
-     $("#ajaxfiller").val(shorty);
-    });
-   
     
+    if ($('#vco').hasClass('active')) {
+
+        $("#ajaxfiller").text("");
+        //Get URL entered
+        var urlgiven = $("#input2").val();
+        $.getJSON("http://v.gd/create.php?format=json&url="+urlgiven /* +"&callback=?"*/,function(data){
+        var shorty = JSON.stringify(data.shorturl);
+        shorty = shorty.replace( /"/, '' );
+        var lengy = shorty.length;
+        shorty = shorty.replaceAt((lengy-1)," ");
+        $("#kinchyj").show();
+        $("#ajaxfiller").val(shorty);
+        });
+   
+    }
+
+    if ($('#googl').hasClass('active')) {
+
+        //Do something here
+        $("#ajaxfiller").text("");
+        //Get URL entered
+        var urlgiven = $("#input2").val();
+        $.post("https://www.googleapis.com/urlshortener/v1/url",{"longUrl": urlgiven},function(data){
+            var shorty = JSON.stringify(data.id);
+            shorty = shorty.replace( /"/, '' );
+            var lengy = shorty.length;
+            shorty = shorty.replaceAt((lengy-1)," ");
+            $("#kinchyj").show();
+            $("#ajaxfiller").val(shorty);
+        });
+
+    }
+
 });
 
 //Set up code for clicking the copy button
