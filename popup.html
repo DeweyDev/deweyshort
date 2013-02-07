@@ -21,7 +21,7 @@
 
         <div id="expand">
             <p>
-                <input id="input" type="text" class="input_class" placeholder="Paste link here"></input>
+                <input id="input" rel="tooltip" title="Paste URL to be expanded" type="text" class="input_class" placeholder="Paste link here"></input>
             </p>
             <p>
                 <input id="button" type="button" class = "btn btn-info"value="Expand"></input>
@@ -30,7 +30,7 @@
 
         <div id="shorten">
             <p>
-                <input id="input2" type="text" class="input_class" placeholder="Paste link here"></input>
+                <input id="input2" rel="tooltip" title="Paste URL to be shortened" type="text" class="input_class" placeholder="Paste link here"></input>
             </p>
             <p>
                 <input id="button2" type="button" value="Shorten" class = "btn btn-info"></input>
@@ -45,7 +45,7 @@
         </div>
         
         <div id = "creatorlink">
-        <a href="mailto:esumsroboticsteam@gmail.com" target="_blank">contact the developers<a/>
+        <a id = "derp" href="mailto:esumsroboticsteam@gmail.com" rel="tooltip" title="Email us with feedback"  target="_blank">contact the developers<a/>
         <div/>       
         
        
@@ -71,5 +71,6 @@
  <script src="jquery.js"></script>
 <script src="popup.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+ <script src="bootstrap-tooltip.js"></script>
 </html>
 

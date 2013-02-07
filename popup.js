@@ -1,3 +1,18 @@
+ $(document).ready(function () {
+                $("a").tooltip({
+                  'selector': '',
+                  'placement': 'top'
+                });
+                $("#input").tooltip({
+                  'selector': '',
+                  'placement': 'top'
+                });
+                $("#input2").tooltip({
+                  'selector': '',
+                  'placement': 'top'
+                });
+                console.log("done");
+              });
 //Don't touch this
 
  String.prototype.replaceAt = function(index, character) {
