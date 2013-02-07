@@ -88,32 +88,36 @@ $("#button2").click(function () {
     }
 
     if ($('#googl').hasClass('active')) {
-
+       
         //Do something here
         $("#ajaxfiller").text("");
         //Get URL entered
-        var urlgiven = $("#input2").val();
-        var givetogoogle = '"' + urlgiven +'"';
-        $.ajax({
-            type: 'POST',
-            contentType: "application/json",
-            context : document.body,
-            url: "https://www.googleapis.com/urlshortener/v1/url?key={AIzaSyBGK6rxkRf20_L8yPjk3Oe-6qHLn530vYE}",
-            data: { longUrl: "http://www.google.com/"},
-            success: bunz(data),
-            dataType: "jsonp"
+        var longUrl = $("#input2").val();
+        longUrl = '"'+longUrl+'"';
+        
+        
+        function googlurl(url, cb) {
+        jsonlib.fetch({
+        url: 'https://www.googleapis.com/urlshortener/v1/url',
+        header: 'Content-Type: application/json',
+        data: JSON.stringify({longUrl: "https://google.com"})
+        }, function (m) {
+        var result = null;
+        try {
+            result = JSON.parse(m.content).id;
+            if (typeof result != 'string') result = null;
+            } catch (e) {
+            result = null;
+            }
+            cb(result);
         });
-           /* alert(data);
-            var shorty = JSON.stringify(data);
-            shorty = shorty.replace( /"/, '' );
-            var lengy = shorty.length;
-            shorty = shorty.replaceAt((lengy-1)," ");
-            $("#kinchyj").show();
-            $("#ajaxfiller").val(shorty); */
 
 
-    }
+        }
 
+        googlurl(longUrl , function(s) { alert(s);$("#kinchyj").show();$("#ajaxfiller").val(s); });
+
+        }
     if ($('#tinyurl').hasClass('active')) {
        
        //Get URL entered
