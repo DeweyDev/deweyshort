@@ -52,7 +52,7 @@ $("#button").click(function () {
 
 });
 
-//Set up code for url despanding
+//Set up code for url shortening
 
 $("#button2").click(function () {
     
@@ -97,6 +97,29 @@ $("#button2").click(function () {
             $("#ajaxfiller").val(shorty); */
 
 
+    }
+
+    if ($('#tinyurl').hasClass('active')) {
+       
+       //Get URL entered
+        var urlgiven = $("#input2").val();
+        var fully = "http://tinyurl.com/api-create.php?url="+urlgiven;
+        $("#ajaxfiller").text("");
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET",fully,false);
+        xmlhttp.send();
+        xmlDoc=xmlhttp.responseXML;
+        alert(xmlDoc);
+        
+        
+        
+        $("#kinchyj").show();
+
+        $("#ajaxfiller").val(data);
+        
+       
+        
+   
     }
 
 });
